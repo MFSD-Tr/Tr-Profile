@@ -1,0 +1,5 @@
+D:\Project visual studio 2015\TractiveWebApi\TracktiveDataObjectLayer\bin\Debug\TracktiveDataObjectLayer.dll
+D:\Project visual studio 2015\TractiveWebApi\TracktiveDataObjectLayer\bin\Debug\TracktiveDataObjectLayer.pdb
+D:\Project visual studio 2015\TractiveWebApi\TracktiveDataObjectLayer\obj\Debug\TracktiveDataObjectLayer.csprojResolveAssemblyReference.cache
+D:\Project visual studio 2015\TractiveWebApi\TracktiveDataObjectLayer\obj\Debug\TracktiveDataObjectLayer.dll
+D:\Project visual studio 2015\TractiveWebApi\TracktiveDataObjectLayer\obj\Debug\TracktiveDataObjectLayer.pdb

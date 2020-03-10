@@ -1,0 +1,521 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{295043C2-4959-40E3-9578-B39516E53C99}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TracktiveDataLayer</RootNamespace>
+    <AssemblyName>TracktiveDataLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EdmxModel\BudgetDisbursement.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\BudgetExpense.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\BudgetMaterial.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\BudgetService.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\BudgetTime.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\Contact.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\ITC_Activity.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\ITC_Client.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\ITC_Discipline.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\ITC_FeeSchedule.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\ITC_FeeType.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\ITC_Phase.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\ITC_Project.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\ITC_TicketRateType.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\ITC_TicketType.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\PayrollItem.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\QBAccountDetail.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\QBActivityItemServiceMap.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\QBBill.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\QBBillLine.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\QBBillLineDetail.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\QBClientCustomerMap.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\QBEstimate.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\QBEstimateLine.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\QBEstimateLineDetail.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\QBGLAccountNumber.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\QBProjectJobMap.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\QBProjectPhaseSubJobMap.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\QBTimeTracking.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\QBTrkDisbursementItemOtherChargeMap.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\QBTrkExpenseItemOtherChargeMap.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\QBTrkMaterialItemNonInventoryMap.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\QBTrkServiceItemNonInventoryMap.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\QBUserEmployeeMap.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\QBUserVendorMap.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\ReportProjectLogo.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\Student.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TicketDisbursement.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TicketExpense.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TicketMaterial.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TicketReport.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TicketService.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TicketTask.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TicketTime.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TicketVoid.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TracktiveDateCheck.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TracktiveDb.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TracktiveDb.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TracktiveDb.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TracktiveDb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TracktiveDb.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TracktiveDocAttachment.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TracktiveDocReferenceLink.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TracktiveQB_Request.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TracktiveQB_Response.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TracktiveQB_SYNCDetails.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TracktiveQB_TransactionLog.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkAddInfo.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkAddInfoField.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkBatchFile.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkBudgetAdjust.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkCategoryContact.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\trkClientContact.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkClientInfo.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkCompanyLogo.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkContactGroup.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkDataGroup.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkDataTransferField.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkDetailScreenField.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkDictionaryTable.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkDisbursement.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkExpense.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkFieldAdjust.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkFieldDefault.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkFieldList.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkFilterField.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkGridScreen.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkImage.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkImageSampleTable.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkImportExportField.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkImportExportTable.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkIndFieldList.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkIndTableList.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkLicenseInformation.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkMaterial.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkMobileDevice.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkMobileDeviceOSType.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkNotesDetail.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkObjectText.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkPassInfoField.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkProjectPhaseMap.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkQueryCondition.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkQuickBookSetting.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkRefCurrency.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkRefSettingsCountry.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkRefSettingState.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkReportField.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkReportFieldGroupDef.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkReportFieldList.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkReportObject.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkReportTemplateRange.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkSampleImagePath.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkScreenField.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkScreenFieldGroupDef.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkScreenObject.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkSearch.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkService.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkSettingsComputer.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkSettingsMobile.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkSettingsSystem.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkSettingsUser.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkSkin.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkSPParameter.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkSPTable.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkSQL.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkStandardRanx.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkSysField.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkSysFieldList.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkSysTable.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkSysTableList.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkTableDef.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkTableDefaultDate.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkTableJoin.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkTableLink.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkTableList.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkTableRelation.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkTableRelationDesign.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkTemplate.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkTemplateHeadersFooter.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkTimeSlot.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkTransferLine.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkTransferLog.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkUser.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkUserGroup.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkUserGroupMember.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkUserMobileDevice.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkUserRateSchedule.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkUserSyncScope.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\TrkWorkStationInfo.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\xTicketExpense.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\xTicketMaterial.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\xTicketService.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EdmxModel\xTicketTime.cs">
+      <DependentUpon>TracktiveDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="EdmxModel\TracktiveDb.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TracktiveDb.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="EdmxModel\TracktiveDb.edmx.diagram">
+      <DependentUpon>TracktiveDb.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EdmxModel\TracktiveDb.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TracktiveDb.edmx</DependentUpon>
+      <LastGenOutput>TracktiveDb.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EdmxModel\TracktiveDb.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TracktiveDb.edmx</DependentUpon>
+      <LastGenOutput>TracktiveDb.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

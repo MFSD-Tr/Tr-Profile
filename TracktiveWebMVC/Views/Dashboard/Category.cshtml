@@ -1,0 +1,59 @@
+﻿@model TracktiveWebMVC.Models.Category.CategoryViewModel
+<link rel="stylesheet" href="~/Content/Assest/Dashboard/DashboardProject.css"/>
+
+<script>
+
+
+</script>
+
+<div class="row m-1">
+
+    <button class="projectListBtn" id="projectListBtnId" onclick="NavOpenClose()">☰ Open Project</button>
+
+</div>
+<div id="mySidebar" class="sideMenu">
+
+    <div class="container projectContainer">
+
+        <div class="row">
+
+            <div class="input-group m-1">
+                <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search fa-sm"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        <br />
+
+        <div class="row" style="height:100%">
+            <div class="col">
+                
+                @foreach (var i in Model.CategoryListModel)
+                {
+
+                    <div class="row projectCard" id="@i.CategoryId" onclick="ProjectDashboardLoad(@i.CategoryId)">
+
+                        <div class="col projectCardItem">@i.CategoryName </div>
+
+                    </div>
+
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="main">
+    <h2>Collapsed Sidebar</h2>
+    <p>Click on the hamburger menu/bar icon to open the sidebar, and push this content to the right.</p>
+</div>
+
+<script type="text/javascript" src="~/Scripts/Assest/Dashboard/DashboardProject.js"></script>
+
+
+
