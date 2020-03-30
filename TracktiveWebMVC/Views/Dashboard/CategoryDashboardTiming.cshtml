@@ -1,0 +1,305 @@
+﻿<style>
+
+    .TimingTable  td{
+
+        text-align:center;
+
+    }
+    .TimingTable th{
+        font-weight:bold;
+        background-color:cornflowerblue;
+        color:white;
+        position: sticky;
+        top: 0px; 
+    }
+    .LeftDiv{
+        display: flex; 
+        justify-content: flex-end
+    }
+    .RightDiv{
+        display: flex; 
+        justify-content:flex-start;
+    }
+  
+    .Loading{
+
+       filter:blur(4px);
+       -ms-filter:blur(4px);
+       -moz-filter:blur(4px);
+    }
+    .text-color-white {
+        
+        color:white;
+    
+    }
+
+</style>
+
+
+<div class="row m-3">
+   
+    <div class="col">
+
+        <div class="card border-left-primary shadow h-100 py-2 ">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total Ticket Available </div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">#4100372</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-skating fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col">
+
+        <div class="card border-left-secondary shadow h-100 py-2 ">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total Active Ticket </div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">#718721</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-creative-commons-nd fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col">
+
+        <div class="card border-left-danger shadow h-100 py-2 ">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total Rejected Ticket </div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">#52327</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-project-diagram fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="row m-3">
+  
+ 
+    <div class="col LeftDiv">
+
+        <input type="text" id="myInput" placeholder="Search Here" class="form-control">
+       
+    </div>
+
+</div>
+
+<div class="table-content" id="main-table-Content">
+
+   <script>
+       $("#main-table-Content").load("http://localhost:55852/DashBoard/CategoryDashBoardTimingTicketTable/?categoryId=12&nosOfoRows=100");
+   </script>
+
+</div>
+
+<div class="row m-3">
+
+    <div class="col LeftDiv">
+
+        <div class="row">
+
+            <div class="col-sm-2 LeftDiv align-items-center h-100 font-weight-bold">
+
+                Show
+
+            </div>
+            <div class="col-sm-8">
+
+                <select class="form-control" id="showEntriesId">
+
+                    <option value="100">100</option>
+                    <option value="500">500</option>
+                    <option value="5000">10000</option>
+                    <option value="All">All</option>
+
+                </select>
+
+            </div>
+            <div class="col-sm-2 RightDiv align-items-center h-100 font-weight-bold">
+
+                Entries
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<button style="display:none" data-toggle="modal" data-target="#KCodeModalView" id="KCodeModalPopUpBtn"></button>
+
+<!-- To change the direction of the modal animation change .right class -->
+<div class="modal fade right" id="KCodeModalView" tabindex="-1" role="dialog" aria-labelledby="KCodeModalView"
+     aria-hidden="true">
+
+    <!-- Add class .modal-side and then add class .modal-top-right (or other classes from list above) to set a position to the modal -->
+    <div class="modal-dialog modal-side modal-top-right" role="document">
+
+
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-color-white">
+                <h4 class="modal-title w-100" id="myModalLabel">K code Information</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="fa fa-times text-color-white"></i></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row m-1">
+
+                    <div class="col-sm-4">K code Schma 1</div>
+                    <div class="col-sm-8 font-weight-bold" id="KCode1">Local 123 </div>
+
+                </div>
+                <hr />
+                <div class="row m-1">
+
+                    <div class="col-sm-4">K code Schma 2</div>
+                    <div class="col-sm-8 font-weight-bold" id="KCode2">OFFICE</div>
+
+                </div>
+                <hr />
+
+                <div class="row m-1">
+
+                    <div class="col-sm-4">K code Schma 3</div>
+                    <div class="col-sm-8 font-weight-bold" id="KCode3">office</div>
+
+                </div>
+                <hr />
+                <div class="row m-1">
+
+                    <div class="col-sm-4">K code Schma 4</div>
+                    <div class="col-sm-8 font-weight-bold" id="KCode4">office general</div>
+
+                </div>
+                
+                
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Side Modal Top Right -->
+
+<button style="display:none" data-toggle="modal" data-target="#DateModalView" id="DateModalPopUpBtn"></button>
+
+<!-- To change the direction of the modal animation change .right class -->
+<div class="modal fade right" id="DateModalView" tabindex="-1" role="dialog" aria-labelledby="DateModalView"
+     aria-hidden="true">
+
+    <!-- Add class .modal-side and then add class .modal-top-right (or other classes from list above) to set a position to the modal -->
+    <div class="modal-dialog modal-side modal-top-right" role="document">
+
+
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-color-white">
+                <h4 class="modal-title w-100" id="myModalLabel">Ticket Date Information</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="fa fa-times text-color-white"></i></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row m-1">
+
+                    <div class="col-sm-4">Starting Date</div>
+                    <div class="col-sm-8 font-weight-bold" id="StartDate">@DateTime.Now</div>
+
+                </div>
+                <hr />
+                <div class="row m-1">
+
+                    <div class="col-sm-4">Reporting Date </div>
+                    <div class="col-sm-8 font-weight-bold" id="RepDate">23 jan 2021</div>
+
+                </div>
+                <hr />
+
+                <div class="row m-1">
+
+                    <div class="col-sm-4">Ending Date</div>
+                    <div class="col-sm-8 font-weight-bold" id="EndDate">12 feb 2022</div>
+
+                </div>
+            
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Side Modal Top Right -->
+
+
+<script>
+
+    $('#showEntriesId').change(function () {
+
+        
+        setTimeout(function () {
+            
+            $("#main-table-Content").load("http://localhost:55852/DashBoard/CategoryDashBoardTimingTicketTable/?categoryId=12&nosOfoRows=10");
+            
+        }, 300);
+
+        
+    })
+
+    function KCodeInfo(id) {
+
+        document.getElementById("KCode1").innerText = "k code 1 with id value : " + id;
+        document.getElementById("KCode2").innerText = "k code 2 with id value : " + id;
+        document.getElementById("KCode3").innerText = "k code 3 with id value : " + id;
+        document.getElementById("KCode4").innerText = "k code 4 with id value : " + id;
+
+        document.getElementById("KCodeModalPopUpBtn").click();
+
+    }
+
+    function DateInfo(id) {
+
+        document.getElementById("StartDate").innerText = new Date().getDate();
+        document.getElementById("RepDate").innerText ="23 jan 2020"
+        document.getElementById("EndDate").innerText = new Date().getDate();
+        document.getElementById("DateModalPopUpBtn").click();
+
+    }
+
+    function RefrenceNos(id) {
+
+
+
+    }
+
+    $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#table-body-contextId tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>

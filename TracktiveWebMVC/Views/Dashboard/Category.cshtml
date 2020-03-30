@@ -1,0 +1,51 @@
+﻿
+<link rel="stylesheet" href="~/Content/Assest/Dashboard/DashboardProject.css"/>
+
+<div id="mySidebar" class="sideMenu" style="width:300px">
+
+    <div class="container projectContainer">
+
+        <div class="row">
+
+            <div class="input-group">
+                <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" id="searchCategory">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search fa-sm"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        <br />
+
+        <div class="row" style="height:100%">
+            <div class="col">
+                
+                @for(int i=1;i<=100;i++)
+                {
+
+                    <div class="row projectCard" id="@i" onclick="ProjectDashboardLoad(@i)">
+
+                        <div class="col projectCardItem">Category @i </div>
+
+                    </div>
+
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="main" style="margin-left:300px">
+    <h2>Collapsed Sidebar</h2>
+    <p>Click on the hamburger menu/bar icon to open the sidebar, and push this content to the right.</p>
+</div>
+
+
+
+<script type="text/javascript" src="~/Scripts/Assest/Dashboard/DashboardProject.js"></script>
+
+
+

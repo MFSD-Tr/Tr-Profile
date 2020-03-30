@@ -1,0 +1,255 @@
+﻿
+<style>
+[data-tooltip]:before {
+    /* needed - do not touch */
+    content: attr(data-tooltip);
+    position: absolute;
+    opacity: 0;
+    
+    /* customizable */
+    transition: all 0.15s ease;
+    padding: 7px;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px silver;    
+}
+
+[data-tooltip]:hover:before {
+    /* needed - do not touch */
+    opacity: 1;
+    
+    /* customizable */
+    background: black;
+    margin-top: -50px;
+    margin-left: 30px;    
+}
+
+[data-tooltip]:not([data-tooltip-persistent]):before {
+    pointer-events: none;
+}
+
+</style>
+<script>EventType='Open'</script>
+<div class="row">
+
+    <div class="col-lg-9 text-left">
+
+        <div class="row">
+            
+           <div class="col-sm-12"><h3><i class="fa fa-arrow-alt-circle-left" style="color:cornflowerblue" onclick="OpenClose()" id="OpenCloseBtn"></i><span class="badge badge-danger">Project Name </span></h3></div>
+
+        </div>
+
+    </div>
+    <div class="col-lg-3 text-right">
+
+        <div  class="dropdown no-arrow mx-1">
+            <a class="dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-envelope fa-fw"></i>
+                <!-- Counter - Messages -->
+                <span class="badge badge-danger badge-counter">7</span>
+            </a>
+            <!-- Dropdown - Messages -->
+            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
+                <h6 class="dropdown-header bg-primary" style="color:white;height:100%">
+                    Project Details
+                </h6>
+                <a class="dropdown-item d-flex align-items-center border " href="#">
+                    <div class="row">
+
+                        <div class="col-sm-2">
+
+                            <div class="icon-circle bg-gradient-secondary"><i class="fa fa-address-card" style="color:white"></i></div>
+
+                        </div>
+                        <div class="col-sm-10 text-wrap">
+
+                            6th & 7th Floors, Assotech One, C-20/1/1A, Sector 62, Noida , Uttar Pardesh 201309                       
+
+                        </div>
+
+                    </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center border " href="#">
+                    <div class="row">
+
+                        <div class="col-sm-2">
+
+                            <div class="icon-circle bg-gradient-secondary"><i class="fa fa-envelope-open" style="color:white"></i></div>
+
+                        </div>
+                        <div class="col-sm-10 text-break">
+
+                            MindfireSolution@mindfiresolution.comkjkjkksdvsdv df df
+
+                        </div>
+
+                    </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center border " href="#">
+                    <div class="row">
+
+                        <div class="col-sm-2">
+
+                            <div class="icon-circle bg-success"><i class="fa fa-sms" style="color:white"></i></div>
+
+                        </div>
+                        <div class="col-sm-10 text-wrap">
+
+                            +91-783892289lkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+
+                        </div>
+
+                    </div>
+                </a>
+                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="row m-1">
+    <div class="col">
+
+        <h4 class="small font-weight-bold">Project Deadline  <span class="float-right">20%</span></h4>
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" data-tooltip="22 Jan 2012"></div>
+        </div>
+
+    </div>
+</div>
+<div class="row m-1 font-weight-bold" style="font-size:12px">
+
+    <div class="col-sm-6 text-left">
+
+        <div class="" data-tooltip="Starting Date">12 jan 2012</div>
+       
+
+    </div>
+
+    <div class="col-sm-6 text-center">
+
+        <div  class="" data-tooltip="Ending Date">12 jan 2013</div>
+
+    </div>
+
+
+</div>
+<div class="row">
+    <div class="col">
+        <ul class="nav nav-tabs card-title">
+            <li><a class="nav-item nav-link active"  data-toggle="tab" href="#Profile" onclick="CategoryDashboardTab('Profile',1)">Profile</a></li>
+            <li><a class="nav-item nav-link"  data-toggle="tab" href="#Rate" onclick="CategoryDashboardTab('Rate',1)">Rate </a></li>
+            <li><a class="nav-item nav-link" data-toggle="tab" href="#Timing" onclick="CategoryDashboardTab('Timing', 1)">Ticket Timing</a></li>
+            <li><a class="nav-item nav-link"  data-toggle="tab" href="#Updation">Updation</a></li>
+            <li><a class="nav-item nav-link"  data-toggle="tab" href="#Status">Status</a></li>
+        </ul>
+
+
+        <div class="tab-content">
+            <div id="Profile" class="tab-pane fade in active">
+                <h3>HOME</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div id="Activity" class="tab-pane fade ">
+                <h3>Activity</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div id="Rate" class="tab-pane fade">
+                <h3>Menu 1</h3>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div id="Timing" class="tab-pane fade">
+                <h3>Ticket Timing</h3>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+            </div>
+            <div id="Status" class="tab-pane fade">
+                <h3>Menu 3</h3>
+                <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    function CategoryDashboardTab(type,categoryId) {
+
+        switch (type) {
+
+            case "Profile":
+
+                $("#Profile").load("http://localhost:55852/Loader/index/", { Message: 'Please hold on we are trying our best!', ColorCode: '#2145E4' });
+
+                setTimeout(function () {
+
+                    $("#Profile").load("http://localhost:55852/DashBoard/CategoryDashoboardProfile/?categoryId="+categoryId);
+
+                }, 1000);
+
+                break;
+            case "Rate":
+
+                $("#Rate").load("http://localhost:55852/Loader/index/", { Message: 'Please hold on we are trying our best!', ColorCode: '#2145E4' });
+
+                setTimeout(function () {
+
+                    $("#Rate").load("http://localhost:55852/DashBoard/CategoryDashboardRate/?categoryId=" + categoryId);
+
+                }, 300);
+
+                break;
+            case "Updation":
+                break;
+
+            case "Timing":
+
+                $("#Timing").load("http://localhost:55852/Loader/index/", { Message: 'Please hold on we are trying our best!', ColorCode: '#2145E4' });
+
+                setTimeout(function () {
+
+                    $("#Timing").load("http://localhost:55852/DashBoard/CategoryDashboardTiming/?categoryId=" + categoryId);
+
+                }, 300);
+
+                break;
+        }
+        
+
+    }
+    function Load() {
+
+        $("#Activity").load("http://localhost:55852/Loader/index/", { Message: 'Please hold on we are trying our best!', ColorCode: '#2145E4' });
+
+    }
+
+    function OpenClose() {
+
+
+        if (EventType == 'Open') {
+
+            document.getElementById("mySidebar").style.width = "0px";
+            document.getElementById("main").style.marginLeft = "0px";
+            document.getElementById("OpenCloseBtn").style.transition = 'all 0.2s';
+            document.getElementById("OpenCloseBtn").className = 'fa fa-arrow-alt-circle-right';
+            EventType = 'Close';
+
+        } else {
+
+            document.getElementById("mySidebar").style.width = "300px";
+            document.getElementById("main").style.marginLeft = "300px";
+            document.getElementById("OpenCloseBtn").style.transition = 'all 0.2s';
+            document.getElementById("OpenCloseBtn").className = 'fa fa-arrow-alt-circle-left'
+            EventType = 'Open';
+        }
+
+    }
+
+
+
+
+</script>
+    
+ 

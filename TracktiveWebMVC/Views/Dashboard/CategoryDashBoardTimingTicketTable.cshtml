@@ -1,0 +1,53 @@
+﻿
+
+    <div class="table-responsive text-nowrap table-hover bg-white m-3" style="max-height:500px;overflow-y:scroll;">
+
+        <table class="table TimingTable" >
+            <thead>
+                <tr>
+                    <th scope="col">S.No</th>
+                    <th scope="col">Refrence Nos </th>
+                    <th scope="col">Rate Type</th>
+                    <th scope="col">Rate (per Hrs)</th>
+                    <th scope="col">Total Duration</th>
+                    <th scope="col">Total Amount(in USD)</th>
+                    <th scope="col">User Responsible</th>
+                    <th scope="col">K code Info</th>
+                    <th scope="col">Date Info</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody class="table-body-content" id="table-body-contextId">
+                @{Random rand = new Random();}
+                @for (int i = 1; i < ViewBag.row+1; i++)
+            {
+
+                    <tr>
+                        <td>@i</td>
+                        <td style="font-size:14px" data-tooltip="Contact Chubb Security re: quote for security system">#@rand.Next()</td>
+                        <td>New bench mark</td>
+                        <td>726.0</td>
+                        <td>@rand.Next(100)</td>
+                        <td>24,684</td>
+                        <td>Vijay dina Nath</td>
+                        <td><i class="fa fa-info-circle" style="color:cornflowerblue" onclick="KCodeInfo('@i')"></i></td>
+                        <td><i class="fa fa-info-circle" style="color:cornflowerblue" onclick="DateInfo('@i')"></i></td>
+                        @if (i % 3 == 0)
+                        {
+                            <td><span class="badge badge-pill bg-danger" style="color:white">Rejected</span></td>
+                        }
+                        else
+                        {
+                            <td><span class="badge badge-pill bg-primary" style="color:white">Accepted</span></td>
+                        }
+
+                    </tr>
+
+                }
+
+            </tbody>
+        </table>
+
+    </div>
+
+
